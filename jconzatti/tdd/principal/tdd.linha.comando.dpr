@@ -5,7 +5,9 @@ program tdd.linha.comando;
 {$R *.res}
 
 uses
-  System.SysUtils;
+  System.SysUtils,
+  UJconzatti.TDD.Entidade.Funcionario in '..\entidade\UJconzatti.TDD.Entidade.Funcionario.pas',
+  UJconzatti.TDD.CasoUso.Funcionario.Bonus in '..\casouso\UJconzatti.TDD.CasoUso.Funcionario.Bonus.pas';
 
 begin
    try
