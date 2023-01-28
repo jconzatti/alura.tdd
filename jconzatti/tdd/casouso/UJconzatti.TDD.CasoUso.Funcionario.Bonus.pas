@@ -25,7 +25,7 @@ end;
 
 function TCasoUsoFuncionarioBonus.CalcularBonus: Currency;
 begin
-	Result = FFuncionario.Salario * 0.1;
+	Result := FFuncionario.Salario * 0.1;
    if Result > 1000 then
       Result := 0;
 end;

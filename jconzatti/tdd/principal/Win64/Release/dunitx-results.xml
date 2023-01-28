@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\Cursos de Programação\Alura\TDD com DUnit\jconzatti\tdd\principal\Win64\Release\tdd.dunit.exe" total="7" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-01-28" time="0.001">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="tdd.dunit.exe" executed="true" result="Success" success="True" time="0.001" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="UJconzatti" executed="true" result="Success" success="True" time="0.001" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TCasoUsoCalculadoraTeste" executed="True" result="Success" success="True" time="0.001" >
+                <results>
+                  <test-case name="TestarSoma.Soma dois valores positivos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma zero a um valor positivo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma um valor positivo a zero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma dois valores negativos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma zero a um valor negativo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma um valor negativo a zero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="TestarSoma.Soma zeros" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>
