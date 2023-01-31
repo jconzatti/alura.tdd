@@ -107,6 +107,9 @@
         </DelphiCompile>
         <DCCReference Include="..\casouso\teste\UJconzatti.TDD.CasoUso.Calculadora.Teste.pas"/>
         <DCCReference Include="..\casouso\UJconzatti.TDD.CasoUso.Calculadora.pas"/>
+        <DCCReference Include="..\casouso\teste\UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste.pas"/>
+        <DCCReference Include="..\casouso\UJconzatti.TDD.CasoUso.Funcionario.Bonus.pas"/>
+        <DCCReference Include="..\entidade\UJconzatti.TDD.Entidade.Funcionario.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

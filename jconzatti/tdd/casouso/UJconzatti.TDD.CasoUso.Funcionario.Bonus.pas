@@ -3,6 +3,7 @@ unit UJconzatti.TDD.CasoUso.Funcionario.Bonus;
 interface
 
 uses
+   System.Math,
    UJconzatti.TDD.Entidade.Funcionario;
 
 type
@@ -25,7 +26,7 @@ end;
 
 function TCasoUsoFuncionarioBonus.CalcularBonus: Currency;
 begin
-	Result := FFuncionario.Salario * 0.1;
+	Result := RoundTo(FFuncionario.Salario * 0.1, -2);
    if Result > 1000 then
       Result := 0;
 end;

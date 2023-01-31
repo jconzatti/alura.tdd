@@ -12,7 +12,10 @@ uses
   DUnitX.Loggers.Xml.NUnit,
   DUnitX.TestFramework,
   UJconzatti.TDD.CasoUso.Calculadora.Teste in '..\casouso\teste\UJconzatti.TDD.CasoUso.Calculadora.Teste.pas',
-  UJconzatti.TDD.CasoUso.Calculadora in '..\casouso\UJconzatti.TDD.CasoUso.Calculadora.pas';
+  UJconzatti.TDD.CasoUso.Calculadora in '..\casouso\UJconzatti.TDD.CasoUso.Calculadora.pas',
+  UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste in '..\casouso\teste\UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste.pas',
+  UJconzatti.TDD.CasoUso.Funcionario.Bonus in '..\casouso\UJconzatti.TDD.CasoUso.Funcionario.Bonus.pas',
+  UJconzatti.TDD.Entidade.Funcionario in '..\entidade\UJconzatti.TDD.Entidade.Funcionario.pas';
 
 var
   runner : ITestRunner;
