@@ -15,7 +15,10 @@ uses
   UJconzatti.TDD.CasoUso.Calculadora in '..\casouso\UJconzatti.TDD.CasoUso.Calculadora.pas',
   UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste in '..\casouso\teste\UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste.pas',
   UJconzatti.TDD.CasoUso.Funcionario.Bonus in '..\casouso\UJconzatti.TDD.CasoUso.Funcionario.Bonus.pas',
-  UJconzatti.TDD.Entidade.Funcionario in '..\entidade\UJconzatti.TDD.Entidade.Funcionario.pas';
+  UJconzatti.TDD.Entidade.Funcionario in '..\entidade\UJconzatti.TDD.Entidade.Funcionario.pas',
+  UJconzatti.TDD.CasoUso.Funcionario.ReajusteSalarial.Teste in '..\casouso\teste\UJconzatti.TDD.CasoUso.Funcionario.ReajusteSalarial.Teste.pas',
+  UJconzatti.TDD.Entidade.Funcionario.Desempenho in '..\entidade\UJconzatti.TDD.Entidade.Funcionario.Desempenho.pas',
+  UJconzatti.TDD.CasoUso.Funcionario.ReajusteSalarial in '..\casouso\UJconzatti.TDD.CasoUso.Funcionario.ReajusteSalarial.pas';
 
 var
   runner : ITestRunner;

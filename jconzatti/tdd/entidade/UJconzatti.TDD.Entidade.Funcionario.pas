@@ -2,6 +2,9 @@ unit UJconzatti.TDD.Entidade.Funcionario;
 
 interface
 
+uses
+   System.Math;
+
 type
    TEntidadeFuncionario = class
    private
@@ -10,6 +13,7 @@ type
       FSalario: Currency;
    public
       constructor Create(aNome : String; aDataAdmissao : TDate; aSalario : Currency); reintroduce;
+      procedure ReajustarSalario(ValReajusteSalarial : Double);
       property Nome: String read FNome;
       property DataAdmissao: TDate read FDataAdmissao;
       property Salario: Currency read FSalario;
@@ -25,6 +29,11 @@ begin
    FNome         := aNome;
    FDataAdmissao := aDataAdmissao;
    FSalario      := aSalario;
+end;
+
+procedure TEntidadeFuncionario.ReajustarSalario(ValReajusteSalarial: Double);
+begin
+   FSalario := RoundTo(FSalario + ValReajusteSalarial, -2);
 end;
 
 end.
