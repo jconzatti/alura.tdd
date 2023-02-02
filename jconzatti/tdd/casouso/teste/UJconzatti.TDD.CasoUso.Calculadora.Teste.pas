@@ -17,13 +17,13 @@ type
       [TearDown]
       procedure Finalizacao;
       [Test]
-      [TestCase('Soma dois valores positivos','3,7')]
-      [TestCase('Soma zero a um valor positivo','0,7')]
-      [TestCase('Soma um valor positivo a zero','3,0')]
-      [TestCase('Soma dois valores negativos','-3,-7')]
-      [TestCase('Soma zero a um valor negativo','0,-7')]
-      [TestCase('Soma um valor negativo a zero','-3,0')]
-      [TestCase('Soma zeros','0,0')]
+      [TestCase('SomaDoisValoresPositivos','3,7')]
+      [TestCase('SomaZeroEUMValorPositivo','0,7')]
+      [TestCase('SomaUmValorPositivoEZero','3,0')]
+      [TestCase('SomaDoisValoresNegativos','-3,-7')]
+      [TestCase('SomaZeroEUmValorNegativo','0,-7')]
+      [TestCase('SomaUmValorNegativoEZero','-3,0')]
+      [TestCase('SomaDoisZeros','0,0')]
       procedure TestarSoma(const a, b : Integer);
    end;
 

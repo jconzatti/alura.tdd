@@ -3,6 +3,7 @@ unit UJconzatti.TDD.CasoUso.Funcionario.Bonus.Teste;
 interface
 
 uses
+   System.SysUtils,
    DUnitX.TestFramework,
    UJconzatti.TDD.Entidade.Funcionario,
    UJconzatti.TDD.CasoUso.Funcionario.Bonus;
@@ -24,14 +25,18 @@ implementation
 procedure TCasoUsoFuncionarioBonusTeste.TestarValorDoBonusZeroParaFuncionarioComSalarioMaiorQue10000;
 var aFuncionario : TEntidadeFuncionario;
     aFuncionarioBonus : TCasoUsoFuncionarioBonus;
-    VlBonus : Double;
 begin
    aFuncionario := TEntidadeFuncionario.Create('Jhoni Conzatti', 0, 15000);
    try
       aFuncionarioBonus := TCasoUsoFuncionarioBonus.Create(aFuncionario);
       try
-         VlBonus := aFuncionarioBonus.CalcularBonus;
-         Assert.AreEqual(0.00, VlBonus);
+         Assert.WillRaise(
+            procedure
+            begin
+               aFuncionarioBonus.CalcularBonus
+            end,
+            ENotSupportedException
+         );
       finally
          aFuncionarioBonus.Destroy;
       end;

@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<test-results name="C:\Cursos de Programação\Alura\TDD com DUnit\jconzatti\tdd\principal\Win64\Release\tdd.dunit.exe" total="13" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-01-30" time="0.003">
+<test-results name="C:\Cursos de Programação\Alura\TDD com DUnit\jconzatti\tdd\principal\Win64\Release\tdd.dunit.exe" total="13" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-02-01" time="0.002">
   <culture-info current-culture="en" current-uiculture="en" />
-  <test-suite type="Assembly" name="tdd.dunit.exe" executed="true" result="Success" success="True" time="0.003" asserts="0">
+  <test-suite type="Assembly" name="tdd.dunit.exe" executed="true" result="Success" success="True" time="0.002" asserts="0">
     <results>
-        <test-suite type="Namespace" name="UJconzatti" executed="true" result="Success" success="True" time="0.006" asserts="0" >
+        <test-suite type="Namespace" name="UJconzatti" executed="true" result="Success" success="True" time="0.003" asserts="0" >
           <results>
-              <test-suite type="Namespace" name="CasoUso" executed="true" result="Success" success="True" time="0.006" asserts="0" >
+              <test-suite type="Namespace" name="CasoUso" executed="true" result="Success" success="True" time="0.003" asserts="0" >
                 <results>
-                    <test-suite type="Namespace" name="Funcionario" executed="true" result="Success" success="True" time="0.005" asserts="0" >
+                    <test-suite type="Fixture" name="TCasoUsoCalculadoraTeste" executed="True" result="Success" success="True" time="0.002" >
                       <results>
-                          <test-suite type="Fixture" name="TCasoUsoFuncionarioReajusteSalarialTeste" executed="True" result="Success" success="True" time="0.003" >
-                            <results>
-                              <test-case name="TestarReajusteSalariaDe3PorCentoSeDesempenhoForADesejar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                              <test-case name="TestarReajusteSalariaDe15PorCentoSeDesempenhoForBom" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                              <test-case name="TestarReajusteSalariaDe20PorCentoSeDesempenhoForOtimo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                            </results>
-                          </test-suite>
-                          <test-suite type="Fixture" name="TCasoUsoFuncionarioBonusTeste" executed="True" result="Success" success="True" time="0.002" >
+                        <test-case name="TestarSoma.SomaDoisValoresPositivos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaZeroEUMValorPositivo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaUmValorPositivoEZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaDoisValoresNegativos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaZeroEUmValorNegativo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaUmValorNegativoEZero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="TestarSoma.SomaDoisZeros" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                    <test-suite type="Namespace" name="Funcionario" executed="true" result="Success" success="True" time="0.001" asserts="0" >
+                      <results>
+                          <test-suite type="Fixture" name="TCasoUsoFuncionarioBonusTeste" executed="True" result="Success" success="True" time="0.001" >
                             <results>
                               <test-case name="TestarValorDoBonusZeroParaFuncionarioComSalarioMaiorQue10000" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                               <test-case name="TestarValorDoBonus10PorCentoParaFuncionarioComSalarioMenorQue10000" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                               <test-case name="TestarValorDoBonus10PorCentoParaFuncionarioComSalarioIgualA10000" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                             </results>
                           </test-suite>
-                      </results>
-                    </test-suite>
-                    <test-suite type="Fixture" name="TCasoUsoCalculadoraTeste" executed="True" result="Success" success="True" time="0.002" >
-                      <results>
-                        <test-case name="TestarSoma.Soma dois valores positivos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma zero a um valor positivo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma um valor positivo a zero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma dois valores negativos" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma zero a um valor negativo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma um valor negativo a zero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                        <test-case name="TestarSoma.Soma zeros" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-suite type="Fixture" name="TCasoUsoFuncionarioReajusteSalarialTeste" executed="True" result="Success" success="True" time="0.000" >
+                            <results>
+                              <test-case name="TestarReajusteSalarialDe3PorCentoSeDesempenhoForADesejar" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                              <test-case name="TestarReajusteSalarialDe15PorCentoSeDesempenhoForBom" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                              <test-case name="TestarReajusteSalarialDe20PorCentoSeDesempenhoForOtimo" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
                       </results>
                     </test-suite>
                 </results>

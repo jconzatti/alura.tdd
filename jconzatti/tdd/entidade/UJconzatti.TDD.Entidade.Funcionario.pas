@@ -11,6 +11,7 @@ type
       FNome: String;
       FDataAdmissao: TDate;
       FSalario: Currency;
+      procedure ArredondarSalario;
    public
       constructor Create(aNome : String; aDataAdmissao : TDate; aSalario : Currency); reintroduce;
       procedure ReajustarSalario(ValReajusteSalarial : Double);
@@ -33,7 +34,13 @@ end;
 
 procedure TEntidadeFuncionario.ReajustarSalario(ValReajusteSalarial: Double);
 begin
-   FSalario := RoundTo(FSalario + ValReajusteSalarial, -2);
+   FSalario := FSalario + ValReajusteSalarial;
+   ArredondarSalario;
+end;
+
+procedure TEntidadeFuncionario.ArredondarSalario;
+begin
+   FSalario := RoundTo(FSalario, -2);
 end;
 
 end.

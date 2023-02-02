@@ -10,13 +10,20 @@ uses
 type
    [TestFixture]
    TCasoUsoFuncionarioReajusteSalarialTeste = class
+   private
+    FFuncionario : TEntidadeFuncionario;
+    FFuncionarioReajusteSalarial : TCasoUsoFuncionarioReajusteSalarial;
    public
+      [Setup]
+      procedure Inicializar;
+      [TearDown]
+      procedure Finalizar;
       [Test]
-      procedure TestarReajusteSalariaDe3PorCentoSeDesempenhoForADesejar;
+      procedure TestarReajusteSalarialDe3PorCentoSeDesempenhoForADesejar;
       [Test]
-      procedure TestarReajusteSalariaDe15PorCentoSeDesempenhoForBom;
+      procedure TestarReajusteSalarialDe15PorCentoSeDesempenhoForBom;
       [Test]
-      procedure TestarReajusteSalariaDe20PorCentoSeDesempenhoForOtimo;
+      procedure TestarReajusteSalarialDe20PorCentoSeDesempenhoForOtimo;
    end;
 
 implementation
@@ -24,64 +31,40 @@ implementation
 
 { TCasoUsoFuncionarioReajusteSalarialTeste }
 
-procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalariaDe3PorCentoSeDesempenhoForADesejar;
-var aFuncionario : TEntidadeFuncionario;
-    aFuncionarioReajusteSalarial : TCasoUsoFuncionarioReajusteSalarial;
-    VlSalario : Double;
+procedure TCasoUsoFuncionarioReajusteSalarialTeste.Inicializar;
 begin
-   aFuncionario := TEntidadeFuncionario.Create('Jhoni Conzatti', 0, 2000);
-   try
-      aFuncionarioReajusteSalarial := TCasoUsoFuncionarioReajusteSalarial.Create(aFuncionario);
-      try
-         aFuncionarioReajusteSalarial.ReajustarSalario(fdADesejar);
-         VlSalario := aFuncionario.Salario;
-         Assert.AreEqual(2060.00, VlSalario);
-      finally
-         aFuncionarioReajusteSalarial.Destroy;
-      end;
-   finally
-      aFuncionario.Destroy;
-   end;
+   FFuncionario := TEntidadeFuncionario.Create('Jhoni Conzatti', 0, 2033.57);
+   FFuncionarioReajusteSalarial := TCasoUsoFuncionarioReajusteSalarial.Create(FFuncionario);
 end;
 
-procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalariaDe15PorCentoSeDesempenhoForBom;
-var aFuncionario : TEntidadeFuncionario;
-    aFuncionarioReajusteSalarial : TCasoUsoFuncionarioReajusteSalarial;
-    VlSalario : Double;
+procedure TCasoUsoFuncionarioReajusteSalarialTeste.Finalizar;
 begin
-   aFuncionario := TEntidadeFuncionario.Create('Jhoni Conzatti', 0, 2000);
-   try
-      aFuncionarioReajusteSalarial := TCasoUsoFuncionarioReajusteSalarial.Create(aFuncionario);
-      try
-         aFuncionarioReajusteSalarial.ReajustarSalario(fdBom);
-         VlSalario := aFuncionario.Salario;
-         Assert.AreEqual(2300.00, VlSalario);
-      finally
-         aFuncionarioReajusteSalarial.Destroy;
-      end;
-   finally
-      aFuncionario.Destroy;
-   end;
+   FFuncionarioReajusteSalarial.Destroy;
+   FFuncionario.Destroy;
 end;
 
-procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalariaDe20PorCentoSeDesempenhoForOtimo;
-var aFuncionario : TEntidadeFuncionario;
-    aFuncionarioReajusteSalarial : TCasoUsoFuncionarioReajusteSalarial;
-    VlSalario : Double;
+procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalarialDe3PorCentoSeDesempenhoForADesejar;
+var VlSalario : Double;
 begin
-   aFuncionario := TEntidadeFuncionario.Create('Jhoni Conzatti', 0, 2000);
-   try
-      aFuncionarioReajusteSalarial := TCasoUsoFuncionarioReajusteSalarial.Create(aFuncionario);
-      try
-         aFuncionarioReajusteSalarial.ReajustarSalario(fdOtimo);
-         VlSalario := aFuncionario.Salario;
-         Assert.AreEqual(2400.00, VlSalario);
-      finally
-         aFuncionarioReajusteSalarial.Destroy;
-      end;
-   finally
-      aFuncionario.Destroy;
-   end;
+   FFuncionarioReajusteSalarial.ReajustarSalario(fdADesejar);
+   VlSalario := FFuncionario.Salario;
+   Assert.AreEqual(2094.58, VlSalario);
+end;
+
+procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalarialDe15PorCentoSeDesempenhoForBom;
+var VlSalario : Double;
+begin
+   FFuncionarioReajusteSalarial.ReajustarSalario(fdBom);
+   VlSalario := FFuncionario.Salario;
+   Assert.AreEqual(2338.61, VlSalario);
+end;
+
+procedure TCasoUsoFuncionarioReajusteSalarialTeste.TestarReajusteSalarialDe20PorCentoSeDesempenhoForOtimo;
+var VlSalario : Double;
+begin
+   FFuncionarioReajusteSalarial.ReajustarSalario(fdOtimo);
+   VlSalario := FFuncionario.Salario;
+   Assert.AreEqual(2440.28, VlSalario);
 end;
 
 initialization

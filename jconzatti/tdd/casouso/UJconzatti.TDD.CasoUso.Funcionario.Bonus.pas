@@ -4,6 +4,7 @@ interface
 
 uses
    System.Math,
+   System.SysUtils,
    UJconzatti.TDD.Entidade.Funcionario;
 
 type
@@ -28,7 +29,7 @@ function TCasoUsoFuncionarioBonus.CalcularBonus: Currency;
 begin
 	Result := RoundTo(FFuncionario.Salario * 0.1, -2);
    if Result > 1000 then
-      Result := 0;
+      raise ENotSupportedException.Create('Funcionário com salário maior que R$ 1.000,00 não pode receber bonus!');
 end;
 
 end.
